@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <ExpenseItemForm />
+      {/* <ExpenseItemForm /> */}
       <ExpenseHistory />
     </>
   )
