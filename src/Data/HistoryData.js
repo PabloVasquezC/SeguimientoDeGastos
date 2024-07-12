@@ -98,13 +98,6 @@ const HistoryData = [
         tipo: "ingreso"
     },
     {
-        id: 15,
-        monto: 9500,
-        fecha: "07/18/2024",
-        descripcion: "Venta de fotografías online",
-        tipo: "ingreso"
-    },
-    {
         id: 16,
         monto: 150000,
         fecha: "01/01/2024",

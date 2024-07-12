@@ -8,9 +8,9 @@ function App() {
 
   return (
     <>
-      <NavBar />
-      <FinanceItemForm />
+      {/* <NavBar /> */}
       <History />
+      <FinanceItemForm />
     </>
   )
 }
