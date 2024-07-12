@@ -1,6 +1,6 @@
 import React from 'react'
-import expenseHistoryData from '../../Data/expenseHistoryData';
-import ExpenseItem from '../ExpenseItem/ExpenseItem';
+import HistoryData from '../../Data/HistoryData';
+import FinanceItem from '../FinanceItem/FinanceItem';
 
 export const History = () => {
   return (
@@ -11,8 +11,8 @@ export const History = () => {
 				<span className='text-2xl'>Fecha</span>
 				<span className='text-2xl'>Descripción</span>
 			</div>
-			{expenseHistoryData.map((expense) => (
-				<ExpenseItem id={expense.id} monto={expense.monto} fecha={expense.fecha} descripcion={expense.descripcion}/>
+			{HistoryData.map((item) => (
+				<FinanceItem id={item.id} monto={item.monto} fecha={item.fecha} descripcion={item.descripcion} tipo={item.tipo}/>
 			))}
     </div>
   )
