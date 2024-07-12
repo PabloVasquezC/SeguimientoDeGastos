@@ -4,7 +4,7 @@ function FinanceItem({ id, monto, fecha, descripcion, tipo }) {
   console.log(tipo);
   const bgColor = tipo === 'ingreso' ? 'bg-blue-300' : 'bg-red-300';
   return (
-    <div className={`flex justify-around border ${bgColor}`}>
+    <div className={`flex justify-around border ${bgColor} hover:scale-105 cursor-pointer`}>
         <span>{id}</span>
         <span>{monto}</span>
         <span>{fecha}</span>

@@ -4,7 +4,7 @@ import FinanceItem from '../FinanceItem/FinanceItem';
 
 export const History = () => {
   // Ordenar los datos por fecha usando el formato 'MM/DD/YYYY'
-  const sortedData = HistoryData.sort((a, b) => new Date(a.fecha) - new Date(b.fecha));
+  const sortedData = HistoryData.sort((b, a) => new Date(a.fecha) - new Date(b.fecha));
 
   return (
     <div className='border border-black shadow-lg rounded-md m-8 flex flex-col'>
@@ -23,6 +23,7 @@ export const History = () => {
           descripcion={item.descripcion}
           tipo={item.tipo}
         />
+		
       ))}
     </div>
   );
