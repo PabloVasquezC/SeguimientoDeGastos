@@ -29,7 +29,7 @@ export const FinanceItemForm = ({ onAddItem }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-80 h-auto p-4 m-4 rounded-xl shadow-black shadow-lg"
+      className="w-80 h-auto p-4 m-4 rounded-xl shadow-black shadow-lg bg-white"
     >
       <h3 className="text-2xl font-semibold">Añadir Nuevo Gasto</h3>
       {/* Monto */}

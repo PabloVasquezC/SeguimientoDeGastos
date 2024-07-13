@@ -18,7 +18,7 @@ function App() {
   };
 
   return (
-    <div className='app-container'>
+    <div id='App' className='app-container'>
       <NavBar />
       <div className='content-container flex flex-col items-center'>
         <CurrentBalance balance={balance}/>
