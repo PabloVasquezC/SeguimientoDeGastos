@@ -4,19 +4,18 @@ export const FinanceItemForm = ({ onAddItem }) => {
   const [monto, setMonto] = useState('');
   const [fecha, setFecha] = useState('');
   const [descripcion, setDescripcion] = useState('');
-  const [tipo, setTipo] = useState('gasto'); // Puedes cambiarlo según tu necesidad
+  const [tipo, setTipo] = useState('gasto');
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Ajuste para asegurar que la fecha sea correcta
     const dateParts = fecha.split("-");
-    const adjustedDate = new Date(dateParts[0], dateParts[1] - 1, dateParts[2]); // Meses en JavaScript empiezan desde 0
+    const adjustedDate = new Date(dateParts[0], dateParts[1] - 1, dateParts[2]);
 
     const newItem = {
       id: Date.now().toString(),
       monto,
-      fecha: adjustedDate.toISOString(), // Almacena la fecha como ISO string
+      fecha: adjustedDate.toISOString(),
       descripcion,
       tipo,
     };

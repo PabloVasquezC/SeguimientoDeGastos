@@ -9,13 +9,13 @@ const formatDateInSpanish = (date) => {
 };
 
 function FinanceItem({ id, monto, fecha, descripcion, tipo, onDelete }) {
-  const bgColor = tipo === 'ingreso' ? 'bg-blue-300' : 'bg-red-300';
+  const bgColor = tipo === 'ingreso' ? 'bg-green-300' : 'bg-red-300';
   return (
     <div className={`flex justify-around items-center border ${bgColor} hover:h-10 cursor-pointer`}>
       <span className='w-1/3 text-center'>{formatDateInSpanish(fecha)}</span>
       <span className='w-1/3 text-center'>${monto} CLP.</span>
       <span className='w-1/3 text-center'>{descripcion}</span>
-      <button onClick={() => onDelete(id)}>
+      <button className='mr-2' onClick={() => onDelete(id)}>
         <FontAwesomeIcon icon={faTrash} />
       </button>
     </div>
