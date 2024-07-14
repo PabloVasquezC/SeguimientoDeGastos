@@ -8,90 +8,90 @@ const HistoryData = [
     },
     {
         id: 2,
-        monto: 15000,
+        monto: 235000,
         fecha: "01/25/2024",
         descripcion: "Freelance web design",
         tipo: "ingreso"
     },
     {
         id: 3,
-        monto: 5000,
+        monto: 270000,
         fecha: "02/10/2024",
         descripcion: "Intereses depósito a plazo",
         tipo: "ingreso"
     },
     {
         id: 4,
-        monto: 230000,
+        monto: 300000,
         fecha: "02/05/2024",
         descripcion: "Salario de febrero",
         tipo: "ingreso"
     },
     {
         id: 5,
-        monto: 18000,
+        monto: 280000,
         fecha: "03/15/2024",
         descripcion: "Venta de acciones",
         tipo: "ingreso"
     },
     {
         id: 6,
-        monto: 240000,
+        monto: 310000,
         fecha: "03/05/2024",
         descripcion: "Salario de marzo",
         tipo: "ingreso"
     },
     {
         id: 7,
-        monto: 12000,
+        monto: 322000,
         fecha: "03/20/2024",
         descripcion: "Consultoría SEO",
         tipo: "ingreso"
     },
     {
         id: 8,
-        monto: 250000,
+        monto: 290000,
         fecha: "04/05/2024",
         descripcion: "Salario de abril",
         tipo: "ingreso"
     },
     {
         id: 9,
-        monto: 8000,
+        monto: 400000,
         fecha: "04/22/2024",
         descripcion: "Clases de inglés",
         tipo: "ingreso"
     },
     {
         id: 10,
-        monto: 255000,
+        monto: 500000,
         fecha: "05/05/2024",
         descripcion: "Salario de mayo",
         tipo: "ingreso"
     },
     {
         id: 11,
-        monto: 32000,
+        monto: 420000,
         fecha: "05/16/2024",
         descripcion: "Bonus por proyecto",
         tipo: "ingreso"
     },
     {
-        id: 12,
+        id: 600000,
         monto: 260000,
         fecha: "06/05/2024",
         descripcion: "Salario de junio",
         tipo: "ingreso"
     },
     {
-        id: 13,
+        id: 480000,
         monto: 17500,
         fecha: "06/20/2024",
         descripcion: "Dividendos de inversiones",
         tipo: "ingreso"
     },
     {
-        id: 14,
+        id: 600000,
         monto: 270000,
         fecha: "07/05/2024",
         descripcion: "Salario de julio",
