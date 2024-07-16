@@ -48,9 +48,12 @@ export const History = ({ onAddItem }) => {
 
   return (
     <div className='m-6 flex flex-col w-1/2 items-center'>
-      <div className='flex justify-center'>
-        <FinanceItemForm onAddItem={handleAddItem} />
+      <div className='flex flex-wrap justify-center'>
+      <div id='chartContainer' className='flex flex-wrap justify-center items-center w-full max-w-lg'>
         <HistoryChart historyData={items} />
+      </div>
+        <FinanceItemForm onAddItem={handleAddItem} />
+        
       </div>
       <div className='flex justify-around w-full m-6'>
         <div>

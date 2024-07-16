@@ -38,6 +38,8 @@ const HistoryChart = ({ historyData }) => {
 
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
+    aspectRatio: 2,
     plugins: {
       legend: {
         position: 'top',
@@ -54,7 +56,11 @@ const HistoryChart = ({ historyData }) => {
     }
   };
 
+  
+
 	return <Line data={chartData} options={options} className='bg-blue-950 rounded-xl'/>;
 };
+
+
 
 export default HistoryChart;

@@ -20,7 +20,7 @@ function Watch() {
 
     return (
         <div>
-            <h2 className='text-2xl'>{time.toLocaleTimeString()}.</h2> 
+            <h2 className='text-2xl mx-2'>{time.toLocaleTimeString()}.</h2> 
         </div>
     );
 }
