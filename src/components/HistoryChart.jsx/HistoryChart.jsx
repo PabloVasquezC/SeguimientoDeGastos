@@ -54,7 +54,7 @@ const HistoryChart = ({ historyData }) => {
     }
   };
 
-	return <Line data={chartData} options={options} className='bg-blue-950 rounded-lg'/>;
+	return <Line data={chartData} options={options} className='bg-blue-950 rounded-xl'/>;
 };
 
 export default HistoryChart;

@@ -5,7 +5,7 @@ import ConfirmationModal from '../ConfirmationModal/ConfirmationModal';
 
 function FinanceItem({ id, monto, fecha, descripcion, tipo, onDelete }) {
   const [isModalOpen, setModalOpen] = useState(false);
-  const bgColor = tipo === 'ingreso' ? 'bg-green-300' : 'bg-red-300';
+  const bgColor = tipo === 'ingreso' ? 'bg-green-400' : 'bg-red-400';
 
   const handleDelete = () => {
     onDelete(id);

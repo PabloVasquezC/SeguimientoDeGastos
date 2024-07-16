@@ -77,120 +77,120 @@ const HistoryData = [
         tipo: "ingreso"
     },
     {
-        id: 600000,
-        monto: 260000,
+        id: 12,
+        monto: 600000,
         fecha: "06/05/2024",
         descripcion: "Salario de junio",
         tipo: "ingreso"
     },
     {
-        id: 480000,
-        monto: 17500,
+        id: 13,
+        monto: 480000,
         fecha: "06/20/2024",
         descripcion: "Dividendos de inversiones",
         tipo: "ingreso"
     },
     {
-        id: 600000,
-        monto: 270000,
+        id: 14,
+        monto: 600000,
         fecha: "07/05/2024",
         descripcion: "Salario de julio",
         tipo: "ingreso"
     },
     {
         id: 16,
-        monto: 150000,
+        monto: 200000,
         fecha: "01/01/2024",
         descripcion: "Renta de enero",
         tipo: "gasto"
     },
     {
         id: 17,
-        monto: 45000,
+        monto: 215000,
         fecha: "01/05/2024",
         descripcion: "Compra de muebles",
         tipo: "gasto"
     },
     {
         id: 18,
-        monto: 9900,
+        monto: 230000,
         fecha: "01/10/2024",
         descripcion: "Pago de servicios de internet",
         tipo: "gasto"
     },
     {
         id: 19,
-        monto: 32000,
+        monto: 300000,
         fecha: "01/15/2024",
         descripcion: "Reparación del automóvil",
         tipo: "gasto"
     },
     {
         id: 20,
-        monto: 7500,
+        monto: 200000,
         fecha: "01/20/2024",
         descripcion: "Cena con amigos",
         tipo: "gasto"
     },
     {
         id: 21,
-        monto: 28500,
+        monto: 250000,
         fecha: "02/01/2024",
         descripcion: "Renta de febrero",
         tipo: "gasto"
     },
     {
         id: 22,
-        monto: 4800,
+        monto: 280000,
         fecha: "02/10/2024",
         descripcion: "Suscripción a gym",
         tipo: "gasto"
     },
     {
         id: 23,
-        monto: 15700,
+        monto: 190000,
         fecha: "02/14/2024",
         descripcion: "Regalos de San Valentín",
         tipo: "gasto"
     },
     {
         id: 24,
-        monto: 23300,
+        monto: 350000,
         fecha: "02/20/2024",
         descripcion: "Compra de electrodomésticos",
         tipo: "gasto"
     },
     {
         id: 25,
-        monto: 29500,
+        monto: 400000,
         fecha: "03/01/2024",
         descripcion: "Renta de marzo",
         tipo: "gasto"
     },
     {
         id: 26,
-        monto: 18600,
+        monto: 500000,
         fecha: "03/15/2024",
-        descripcion: "Factura de electricidad",
+        descripcion: "Viaje al Sur de Chile",
         tipo: "gasto"
     },
     {
         id: 27,
-        monto: 11500,
+        monto: 320000,
         fecha: "03/30/2024",
         descripcion: "Compra de ropa",
         tipo: "gasto"
     },
     {
         id: 28,
-        monto: 30900,
+        monto: 370000,
         fecha: "04/01/2024",
         descripcion: "Renta de abril",
         tipo: "gasto"
     },
     {
         id: 29,
-        monto: 5200,
+        monto: 380000,
         fecha: "04/12/2024",
         descripcion: "Entradas al cine",
         tipo: "gasto"

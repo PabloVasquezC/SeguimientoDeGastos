@@ -1,13 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import FinanceItem from '../FinanceItem/FinanceItem';
 import FinanceItemForm from '../FinanceItemForm/FinanceItemForm';
 import HistoryData from '../../Data/HistoryData';
 import HistoryChart from '../HistoryChart.jsx/HistoryChart';
 
 export const History = ({ onAddItem }) => {
-  const [items, setItems] = useState(HistoryData);
+  const [items, setItems] = useState(() => {
+    // Intentamos cargar los items desde localStorage, si no hay, cargamos desde HistoryData
+    const savedItems = localStorage.getItem('historyItems');
+    return savedItems ? JSON.parse(savedItems) : HistoryData;
+  });
   const [sortOrder, setSortOrder] = useState('fecha');
   const [filterType, setFilterType] = useState('all');
+
+  useEffect(() => {
+    // Guardamos los items en localStorage cada vez que cambian
+    localStorage.setItem('historyItems', JSON.stringify(items));
+  }, [items]);
 
   const handleDelete = (id) => {
     const updatedItems = items.filter(item => item.id !== id);
@@ -15,8 +24,9 @@ export const History = ({ onAddItem }) => {
   };
 
   const handleAddItem = (newItem) => {
-    setItems([...items, newItem]);
-    onAddItem(newItem); 
+    const newItems = [...items, newItem];
+    setItems(newItems);
+    onAddItem(newItem);
   };
 
   const handleSortChange = (e) => {
@@ -42,10 +52,10 @@ export const History = ({ onAddItem }) => {
         <FinanceItemForm onAddItem={handleAddItem} />
         <HistoryChart historyData={items} />
       </div>
-      <div className='flex justify-around w-full mb-4'>
+      <div className='flex justify-around w-full m-6'>
         <div>
           <label htmlFor="sortOrder">Ordenar por: </label>
-          <select id="sortOrder" value={sortOrder} onChange={handleSortChange}>
+          <select id="sortOrder" value={sortOrder} onChange={handleSortChange} >
             <option value="fecha">Fecha</option>
             <option value="monto">Monto</option>
           </select>
@@ -59,11 +69,12 @@ export const History = ({ onAddItem }) => {
           </select>
         </div>
       </div>
+      
       <div className='w-full'>
-        <div className='shadow-lg rounded-md flex justify-around border border-black border-b-2'>
-          <span className='w-1/3 text-2xl text-center'>Fecha</span>
-          <span className='w-1/3 text-2xl text-center'>Monto</span>
-          <span className='w-1/3 text-2xl text-center'>Descripción</span>
+        <div className='shadow-lg rounded-md flex justify-around border bg-blue-900 border-black border-b-2'>
+          <span className='w-1/3 text-2xl text-white text-center'>Fecha</span>
+          <span className='w-1/3 text-2xl text-white text-center'>Monto</span>
+          <span className='w-1/3 text-2xl text-white text-center'>Descripción</span>
         </div>
         {sortedData.map((item) => (
           <FinanceItem
@@ -73,7 +84,7 @@ export const History = ({ onAddItem }) => {
             fecha={item.fecha}
             descripcion={item.descripcion}
             tipo={item.tipo}
-            onDelete={handleDelete} 
+            onDelete={handleDelete}
           />
         ))}
       </div>

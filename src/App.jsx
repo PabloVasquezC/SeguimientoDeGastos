@@ -1,19 +1,27 @@
-import './App.css'
-import CurrentBalance from './components/CurrentBalance/CurrentBalance'
-import FinanceItemForm from './components/FinanceItemForm/FinanceItemForm'
-import History from './components/History/History'
-import { NavBar } from './components/NavBar/NavBar'
-import { useState } from 'react'
+import './App.css';
+import CurrentBalance from './components/CurrentBalance/CurrentBalance';
+import History from './components/History/History';
+import { NavBar } from './components/NavBar/NavBar';
+import { useState, useEffect } from 'react';
 
 function App() {
-  const [balance, setBalance] = useState(4200000);
+  const [balance, setBalance] = useState(() => {
+    // Cargar el balance desde localStorage o establecer un valor inicial
+    const savedBalance = localStorage.getItem('currentBalance');
+    return savedBalance !== null ? parseFloat(savedBalance) : 4200000;
+  });
+
+  useEffect(() => {
+    // Guardar el balance en localStorage cuando este cambie
+    localStorage.setItem('currentBalance', balance.toString());
+  }, [balance]);
 
   const handleAddItem = (item) => {
     const monto = parseFloat(item.monto);
     if (item.tipo === 'ingreso') {
-      setBalance(balance + monto);
+      setBalance(prev => prev + monto);
     } else if (item.tipo === 'gasto') {
-      setBalance(balance - monto);
+      setBalance(prev => prev - monto);
     }
   };
 
@@ -28,5 +36,4 @@ function App() {
   )
 }
 
-export default App
-
+export default App;
